@@ -12,6 +12,8 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#Employment">Employment</a></li>
+        <li><a href="#standOut">Stand Out...</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -22,8 +24,7 @@
       <h1>About Me</h1>
       <p>Welcome to my software developer portfolio! I am passionate about creating innovative solutions and building robust applications. With a strong foundation in programming languages like HTML, CSS, and JavaScript, along with experience in various frameworks and libraries, I strive to develop efficient and scalable software.</p>
     </section>
-    
-    <section id="projects">
+        <section id="projects">
       <h2>Projects</h2>
       <div class="project">
         <h3>Project 1</h3>
@@ -37,18 +38,48 @@
     
     <section id="contact">
       <h2>Contact Me</h2>
-      <form>
+      <form id="contact-form">
         <label for="name">Name</label>
-        <input type="text" id="name" required>
-        
+        <input type="text" id="name" name="name" required>
+      
         <label for="email">Email</label>
-        <input type="email" id="email" required>
-        
+        <input type="email" id="email" name="email" required>
+      
         <label for="message">Message</label>
-        <textarea id="message" required></textarea>
-        
-        <button type="submit">Send Message</button>
+        <textarea id="message" name="message" required></textarea>
+      
+        <button type="submit">Submit</button>
       </form>
+      
+      <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+          event.preventDefault();
+      
+          // Gather form data
+          var formData = new FormData(this);
+      
+          // Send form data to the server
+          fetch("/send-email", {
+            method: "POST",
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              alert("Email sent successfully!");
+              // Optionally, clear the form fields
+              this.reset();
+            } else {
+              alert("Failed to send email.");
+            }
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while sending the email.");
+          });
+        });
+      </script>
+      
     </section>
   </main>
   
