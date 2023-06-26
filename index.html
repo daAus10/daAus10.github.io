@@ -1,33 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#Employment">Employment</a></li>
+        <li><a href="#Work">Employment</a></li>
         <li><a href="#standOut">Stand Out...</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
+
   <main>
-    <section id="about">
-      <h1>About Me</h1>
-      <p>Welcome to my software developer portfolio! I am passionate about creating innovative solutions and building robust applications. With a strong foundation in programming languages like HTML, CSS, and JavaScript, along with experience in various frameworks and libraries, I strive to develop efficient and scalable software.</p>
+
+    <section class="about_section">
+      <di class="about_pic">
+        <img src="assets/DSC_0196.jpeg" alt="main picture" width="400">
+        </div>
+        <div class="about_text">
+          <h1>console.log("Hello world!");</h1>
+          <p class="intro">My name is <strong>Osten Albaloo</strong>, and I was born in a small village called Karemlash in Iraq.
+             Computers have always fascinated me, starting from the young age of <strong>7</strong>.
+              When my family moved to Canada, I was <strong>16</strong> years old and that's when 
+              I began exploring the world of <strong>software development</strong>. Since then, I have gained a 
+              lot of knowledge and my goal is to become a successful <strong>full-stack developer</strong>.
+               I want to create useful <strong>applications and websites</strong> that can benefit people from all walks of life.
+
+          </p>
+          <a href="assets/Resume.pdf" class="blue-button">Resume</a>
+
+        </div>
     </section>
-        <section id="projects">
+    <section id="projects">
       <h2>Projects</h2>
+      <div class="title_container">
+      <h3 class="title">Awaken Spa CMS</h3>
+      <a href="https://awakenspa.up.railway.app/">
+      <img class="visit" src="assets/External_link_font_awesome.svg" alt="" width="20px">
+    </a>  
+    </div>
+      <div class="project1">
+       
+        <img src="assets/awaken.png" alt="awaken icon" class="awakenImage" width="400">
+        <p>Created a content management website for Awaken Skin Studio, a spa focused on relaxation and safe treatments. The site includes a user-friendly appointment booking system, allowing clients to schedule treatments easily. It also enables the administrator to manage content, employees, roles, and appointment assignments.
+
+        </p>
+      </div>
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum at lacus elementum interdum.</p>
+      </div>
+    </section>
+
+    <section id="Work">
+      <h2>Work Experience</h2>
       <div class="project">
         <h3>Project 1</h3>
+      
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum at lacus elementum interdum.</p>
       </div>
       <div class="project">
@@ -35,58 +74,21 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et ipsum at lacus elementum interdum.</p>
       </div>
     </section>
-    
+
     <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-      
-        <button type="submit">Submit</button>
-      </form>
-      
-      <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-      
-          // Gather form data
-          var formData = new FormData(this);
-      
-          // Send form data to the server
-          fetch("/send-email", {
-            method: "POST",
-            body: formData
-          })
-          .then(response => response.json())
-          .then(data => {
-            if (data.success) {
-              alert("Email sent successfully!");
-              // Optionally, clear the form fields
-              this.reset();
-            } else {
-              alert("Failed to send email.");
-            }
-          })
-          .catch(error => {
-            console.error("Error:", error);
-            alert("An error occurred while sending the email.");
-          });
-        });
-      </script>
-      
+      <img
+        src="https://www.flaticon.com/free-icon/phone-call_1806873?term=call&page=1&position=2&origin=tag&related_id=1806873">
+
+      <link rel="icon" type="image/x-icon"
+        href="https://www.flaticon.com/free-icon/phone-call_1806873?term=call&page=1&position=2&origin=tag&related_id=1806873">
     </section>
   </main>
-  
+
   <footer>
     <p>&copy; 2023 Software Developer Portfolio. All rights reserved.</p>
   </footer>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>
