@@ -64,7 +64,7 @@ main {
   padding: 0 20px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #333;
   margin-bottom: 10px;
   text-align: center;
@@ -206,14 +206,14 @@ border: 3px solid #000000;
 .text {
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
+  padding: 0px 0px;
   position: absolute;
   bottom: 8px;
   width: 100%;
   background-color: dodgerblue;
   text-align: center;
-  border-right: white solid 280px;
-  border-left: white solid 200px;
+  border-right: white solid 10px;
+  border-left: white solid 10px;
 }
 
 /* Number text (1/3 etc) */
@@ -258,4 +258,12 @@ border: 3px solid #000000;
   margin-left: 200px;
   margin-right: 200px;
   margin-bottom: 100px;
+}
+.jb_title {
+  margin-top: 0px;
+  margin-bottom: 200px;
+  margin-right: 120px;
+}
+h3 > p {
+  font-weight: lighter;
 }
