@@ -272,3 +272,15 @@ border: 3px solid #000000;
 h3 > p {
   font-weight: lighter;
 }
+
+.job_tasks > li {
+  font-weight: normal;
+  list-style: none;
+padding-top: 80px;
+margin-bottom: 20px;
+margin-top: -90px;
+}
+.job_tasks {
+  margin-top: -130px;
+  margin-bottom: -180px;
+}
